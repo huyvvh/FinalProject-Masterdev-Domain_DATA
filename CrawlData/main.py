@@ -3,12 +3,12 @@ import json
 import csv
 import re
 
-laptop_page_url = "https://tiki.vn/api/v2/products?limit=48&include=advertisement&aggregations=2&category=17166&page={}&urlKey=cross-border-hang-quoc-te"
+laptop_page_url = "https://tiki.vn/api/v2/products?limit=48&include=advertisement&aggregations=2&category=1883&page={}&urlKey=nha-cua-doi-song"
 product_url = "https://tiki.vn/api/v2/products/{}"
 
-product_id_file = "data_quocte/product-id.txt"
-product_data_file = "data_quocte/product.txt"
-product_file = "data_quocte/product.csv"
+product_id_file = "data_nhacua_doisong/product-id.txt"
+product_data_file = "data_nhacua_doisong/product.txt"
+product_file = "data_nhacua_doisong/product.csv"
 
 headers = {
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"}
