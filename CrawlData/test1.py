@@ -62,15 +62,6 @@ def extractBookInfo(item):
     """Create a dict with wanted fields from item"""
 
     result = {
-        # 'id': item.get('id'),
-        # 'name': item.get('name'),
-        # 'author_name': item.get('author_name'),
-        # 'short_description': item.get('short_description'),
-        # 'price': item.get('price'),
-        # 'discount': item.get('discount'),
-        # 'discount_rate': item.get('discount_rate'),
-        # 'original_price': item.get('original_price'),
-        # 'quantity_sold': item.get('quantity_sold').get('value'),
         'id': item.get('id'),
         'name': item.get('name'),
         'author_name': item.get('author_name'),
