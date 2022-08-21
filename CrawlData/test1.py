@@ -8,7 +8,7 @@ HEADERS = {
 
 
 def getTikiLink(pageIdx):
-    return f"https://tiki.vn/api/personalish/v1/blocks/listings?limit=48&include=advertisement&aggregations=3&trackity_id=e4d3ce32-d9bb-6ae2-42e6-9e915a0e6a6d&category=2527&page={pageIdx}&urlKey=sach-ba-me-em-be"
+    return f"https://tiki.vn/api/personalish/v1/blocks/listings?limit=48&include=advertisement&aggregations=3&trackity_id=e4d3ce32-d9bb-6ae2-42e6-9e915a0e6a6d&category=1468&page={pageIdx}&urlKey=tap-chi-catalogue"
 
 
 def getBookLink(_id, spid):
@@ -66,7 +66,6 @@ def extractBookInfo(item):
         'name': item.get('name'),
         'author_name': item.get('author_name'),
         'inventory_status': item.get('inventory_status'),
-        'short_description': item.get('short_description'),
         'original_price': item.get('original_price'),
         'discount': item.get('discount'),
         'price': item.get('price'),
@@ -74,7 +73,7 @@ def extractBookInfo(item):
         'rating_average': item.get('rating_average'),
         'review_count': item.get('review_count'),
         'quantity_sold': item.get('quantity_sold'),
-        'type_book': 'sach_me_va_be',
+        'type_book': 'tap_chi',
     }
 
     if item.get('book_cover'):
@@ -189,7 +188,7 @@ if __name__ == "__main__":
 
         print("Making pickle file.")
 
-        df.to_csv("tiki_data_sach_me_va_be.csv")
+        df.to_csv("tiki_data_tap_chi.csv", sep=";")
     else:
         print("Data is empty!")
 
