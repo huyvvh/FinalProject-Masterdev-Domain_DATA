@@ -42,6 +42,7 @@ public class Spark_Consumer_Data {
                 .format("kafka")
                 .option("kafka.bootstrap.servers", "192.168.193.118:9092")
                 .option("subscribe", "huyvv20")
+                .option("group.id","group2")
                 .option("StartingOffsets", "earliest")
                 .option("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
                 .option("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
